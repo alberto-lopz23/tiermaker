@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tiermaker</title>
+  <link href='/style.css' rel='stylesheet'>
+</head>
+<body>
+  <header id="top-header">
+    <img src="https://tiermaker.com/images/tiermaker-logo.png" />
+  </header>
+
+  <section class="tier-container">
+    <div class="rows">
+      <aside class="label-tier" style="--lebel-background: var(--color-s)">
+        <span contenteditable="true">S</span>
+      </aside>
+    </div>
+
+    <div class="rows">
+      <aside class="label-tier" style="--lebel-background: var(--color-a)">
+        <span contenteditable="true">A</span>
+      </aside>
+    </div>
+
+    <div class="rows">
+      <aside class="label-tier" style="--lebel-background: var(--color-b)">
+        <span contenteditable="true">B</span>
+      </aside>
+    </div>
+
+    <div class="rows">
+      <aside class="label-tier" style="--lebel-background: var(--color-c)">
+        <span contenteditable="true">C</span>
+      </aside>
+    </div>
+
+    <div class="rows">
+      <aside class="label-tier" style="--lebel-background: var(--color-d)">
+        <span contenteditable="true">D</span>
+      </aside>
+    </div>
+
+    <div class="rows">
+      <aside class="label-tier" style="--lebel-background: var(--color-e)">
+        <span contenteditable="true">E</span>
+      </aside>
+    </div>
+  </section>
+
+  <footer id="selector-footer">
+
+    <section id="selector-buttons">
+      <label>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+          <path d="M9 12h6" />
+          <path d="M12 9v6" />
+        </svg>
+        <!-- tenemos este input acá adentro para no tener crear una function en js que va hacer lo mismo que el click del boton de subir imagen -->
+        <input multiple accept="image/*" id="image-input" type="file" hidden />
+      </label>
+
+      <button id="reset-tier-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5" />
+        </svg>
+      </button>
+
+      <button id="save-tier-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-device-floppy">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" />
+          <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+          <path d="M14 4l0 4l-6 0l0 -4" />
+        </svg>
+      </button>
+    </section>
+
+    <section id="tier-selector">
+      
+    </section>
+  <script defer type="text/javascript" src="/main.js"></script>
+</body>
+</html>

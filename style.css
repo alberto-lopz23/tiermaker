@@ -1,0 +1,138 @@
+
+:root {
+    --color-s: #ff7f80;
+    --color-a: #ffc07f;
+    --color-b: #ffdf80;
+    --color-c: #fdff7f;
+    --color-d: #bfff7f;
+    --color-e: #7fff7f;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+
+body {
+    background-color: #111;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-inline: 25px;
+    color: #fff;
+}
+
+#top-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 10px;
+
+
+    & img {
+        max-width: 150px ;
+        height: auto;
+    }
+}
+
+
+.tier-container {
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+   background: #1f1f1f;
+}
+
+.rows {
+  display: flex; 
+  flex-direction: row;
+  border-bottom: solid 1px #333;
+}
+
+.label-tier {
+  cursor: pointer; 
+  background: var(--lebel-background, #034);
+  color: #fff;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & span:focus {
+    outline: none;
+  }
+  
+}
+
+
+#selector-footer {
+  display: block;
+  flex-direction: column;
+  margin-top: 10px;
+  align-items: center;
+  gap: 10px;
+}
+
+#selector-buttons {
+  margin-bottom: 80px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+
+
+  & button, & label {
+    cursor: pointer;
+    transition: all .3s ease;
+    gap: 10px;
+    background: #034;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+    border-radius: 50%;
+    border: solid 1px #333;
+    color: #fff;
+
+  }
+
+
+  & button:hover, & label:hover {
+    background: #333;
+    scale: 1.05;
+  }
+}
+
+
+#tier-selector{
+  width: 100%;
+  height: 200px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #666;
+
+}
+
+.tier-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: grab;
+  background: #fff;
+  margin: 20px;
+  transition: all .3s ease;
+}
