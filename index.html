@@ -1,55 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>tiermaker</title>
-  <link href='/style.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tiermaker lopal.dev</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header id="top-header">
     <img src="https://tiermaker.com/images/tiermaker-logo.png" />
   </header>
 
-  <section class="tier-container">
-    <div class="rows">
-      <aside class="label-tier" style="--lebel-background: var(--color-s)">
+  <section class="tier">
+    <div class="row">
+      <aside class="label" style="--level: var(--color-s)">
         <span contenteditable="true">S</span>
       </aside>
     </div>
 
-    <div class="rows">
-      <aside class="label-tier" style="--lebel-background: var(--color-a)">
+    <div class="row">
+      <aside class="label" style="--level: var(--color-a)">
         <span contenteditable="true">A</span>
       </aside>
     </div>
 
-    <div class="rows">
-      <aside class="label-tier" style="--lebel-background: var(--color-b)">
+    <div class="row">
+      <aside class="label" style="--level: var(--color-b)">
         <span contenteditable="true">B</span>
       </aside>
     </div>
 
-    <div class="rows">
-      <aside class="label-tier" style="--lebel-background: var(--color-c)">
+    <div class="row">
+      <aside class="label" style="--level: var(--color-c)">
         <span contenteditable="true">C</span>
       </aside>
     </div>
 
-    <div class="rows">
-      <aside class="label-tier" style="--lebel-background: var(--color-d)">
+    <div class="row">
+      <aside class="label" style="--level: var(--color-d)">
         <span contenteditable="true">D</span>
       </aside>
     </div>
 
-    <div class="rows">
-      <aside class="label-tier" style="--lebel-background: var(--color-e)">
+    <div class="row">
+      <aside class="label" style="--level: var(--color-e)">
         <span contenteditable="true">E</span>
       </aside>
     </div>
   </section>
 
-  <footer id="selector-footer">
+  <footer id="selector">
 
     <section id="selector-buttons">
       <label>
@@ -60,7 +60,6 @@
           <path d="M9 12h6" />
           <path d="M12 9v6" />
         </svg>
-        <!-- tenemos este input acá adentro para no tener crear una function en js que va hacer lo mismo que el click del boton de subir imagen -->
         <input multiple accept="image/*" id="image-input" type="file" hidden />
       </label>
 
@@ -84,9 +83,10 @@
       </button>
     </section>
 
-    <section id="tier-selector">
-      
+    <section id="selector-items">
+
     </section>
-  <script defer type="text/javascript" src="/main.js"></script>
+  </footer>
+  <script src="main.js"></script>
 </body>
 </html>

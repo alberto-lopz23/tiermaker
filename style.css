@@ -1,138 +1,144 @@
 
 :root {
-    --color-s: #ff7f80;
-    --color-a: #ffc07f;
-    --color-b: #ffdf80;
-    --color-c: #fdff7f;
-    --color-d: #bfff7f;
-    --color-e: #7fff7f;
-  }
+  --color-s: #ff7f80;
+  --color-a: #ffc07f;
+  --color-b: #ffdf80;
+  --color-c: #fdff7f;
+  --color-d: #bfff7f;
+  --color-e: #7fff7f;
+}
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  button {
-    background: transparent;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-  }
-
+button {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
 
 body {
-    background-color: #111;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0 auto;
-    max-width: 800px;
-    padding-inline: 25px;
-    color: #fff;
+  background: #111;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0 auto;
+  max-width: 500px;
+  padding-inline: 32px;
+  user-select: none;
 }
 
 #top-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-block: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0 16px;
 
-
-    & img {
-        max-width: 150px ;
-        height: auto;
-    }
+  & img {
+    max-width: 125px;
+    height: auto;
+  }
 }
 
-
-.tier-container {
-  border: 1px solid #333;
+.tier {
+  border: 1px solid #444;
   display: flex;
   flex-direction: column;
-   background: #1f1f1f;
+  background: #1f1f1f;
 }
 
-.rows {
-  display: flex; 
+.row {
+  display: flex;
   flex-direction: row;
-  border-bottom: solid 1px #333;
+  border-bottom: 1px solid #111;
+  transition: all .3s ease;
+
+  &.drag-over {
+    background: #555;
+    scale: 1.01;
+  }
 }
 
-.label-tier {
-  cursor: pointer; 
-  background: var(--lebel-background, #034);
-  color: #fff;
+.label {
+  cursor: pointer;
+  background: var(--level, #09f);
+  color: #333;
   font-weight: bold;
   width: 50px;
   height: 50px;
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   & span:focus {
-    outline: none;
+    outline: 1px solid #fff;
   }
-  
 }
 
-
-#selector-footer {
-  display: block;
+#selector {
+  display: flex;
   flex-direction: column;
-  margin-top: 10px;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
+  margin-top: 16px;
 }
 
 #selector-buttons {
-  margin-bottom: 80px;
   display: flex;
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
 
-
-  & button, & label {
+  & button,
+  & label {
     cursor: pointer;
     transition: all .3s ease;
-    gap: 10px;
-    background: #034;
+    background: #222;
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    align-items: center;
+    width: 24px;
+    height: 24px;
     padding: 4px;
-    border-radius: 50%;
-    border: solid 1px #333;
-    color: #fff;
 
+    &:hover {
+      background: #444;
+      scale: 1.1;
+    }
   }
 
-
-  & button:hover, & label:hover {
-    background: #333;
-    scale: 1.05;
+  & svg {
+    width: 100%;
+    height: 100%;
   }
 }
 
-
-#tier-selector{
+#selector-items {
+  border: 1px solid #666;
   width: 100%;
-  height: 200px;
+  height: 100px;
   margin-bottom: 100px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: 1px solid #666;
+  flex-wrap: wrap;
 
+  &.drag-files {
+    background: #555;
+    border-style: dashed;
+  }
 }
 
-.tier-image {
-  width: 100px;
-  height: 100px;
+.item-image {
+  width: 50px;
+  height: 50px;
   object-fit: cover;
-  cursor: grab;
   background: #fff;
-  margin: 20px;
-  transition: all .3s ease;
+  cursor: grab;
+
+  &.drag-preview {
+    opacity: .5;
+    pointer-events: none;
+  }
 }
